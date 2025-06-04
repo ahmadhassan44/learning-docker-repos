@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  client:
+    image: ahmadhassan44/learning-docker-repos:1.0
+    ports:
+      - "5173:5173"  
+    depends_on:
+      - server
+
+  server:
+    image: ahmadhassan44/learning-docker-repos:2.0
+    ports:
+      - "5000:5000" 
